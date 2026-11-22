@@ -2,26 +2,16 @@
 
 set -ouex pipefail
 
-# Copy the contents of system_files/ of the git repo to /
-cp -avf "/ctx/system_files"/. /
+### 1. Rebrand OS Identity to XypherOS v1 Quantum Edge
+sed -i 's/^NAME=.*/NAME="XypherOS"/' /usr/lib/os-release
+sed -i 's/^PRETTY_NAME=.*/PRETTY_NAME="XypherOS v1 Quantum Edge"/' /usr/lib/os-release
+sed -i 's/^ID=.*/ID=xypheros/' /usr/lib/os-release
+sed -i 's/^DEFAULT_HOSTNAME=.*/DEFAULT_HOSTNAME="xypheros"/' /usr/lib/os-release
+sed -i 's|^HOME_URL=.*|HOME_URL="https://github.com/NeonBlockStudios-878/xypheros"|' /usr/lib/os-release
 
-### Install packages
+### 2. Ensure Quantum Edge Light Mode Config Directory Exists
+mkdir -p /etc/skel/.config
+mkdir -p /usr/share/wallpapers/XypherOS/contents/images
 
-# Packages can be installed from any enabled yum repo on the image.
-# RPMfusion repos are available by default in ublue main images
-# List of rpmfusion packages can be found here:
-# https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
-
-# this installs a package from fedora repos
-dnf5 install -y tmux
-
-# Use a COPR Example:
-#
-# dnf5 -y copr enable ublue-os/staging
-# dnf5 -y install package
-# Disable COPRs so they don't end up enabled on the final image:
-# dnf5 -y copr disable ublue-os/staging
-
-#### Example for enabling a System Unit File
-
-systemctl enable podman.socket
+### 3. Clean up temporary package caches
+dnf5 clean all || true
