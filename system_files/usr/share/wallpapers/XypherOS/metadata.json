@@ -1,0 +1,12 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "NeonBlock Studios"
+            }
+        ],
+        "Id": "XypherOS",
+        "License": "CC-BY-SA-4.0",
+        "Name": "XypherOS Quantum Edge"
+    }
+}
