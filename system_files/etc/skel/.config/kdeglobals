@@ -1,5 +1,5 @@
 [General]
-ColorScheme=BreezeLight
+ColorScheme=QuantumEdgeLight
 Name=Quantum Edge Light
 AccentColor=0,184,212
 LastUsedCustomAccentColor=0,184,212
@@ -12,10 +12,15 @@ SingleClick=false
 
 [Colors:Window]
 BackgroundNormal=244,246,249
-BackgroundAlternate=234,238,243
+BackgroundAlternate=233,237,242
 ForegroundNormal=18,20,23
-ForegroundInactive=95,104,117
+ForegroundInactive=92,102,115
 ForegroundActive=0,184,212
+ForegroundLink=0,151,178
+ForegroundVisited=0,118,140
+ForegroundNegative=218,68,83
+ForegroundNeutral=246,116,0
+ForegroundPositive=39,174,96
 DecorationFocus=0,184,212
 DecorationHover=0,184,212
 
@@ -23,15 +28,39 @@ DecorationHover=0,184,212
 BackgroundNormal=255,255,255
 BackgroundAlternate=244,246,249
 ForegroundNormal=18,20,23
+ForegroundInactive=92,102,115
 ForegroundActive=0,184,212
 DecorationFocus=0,184,212
+DecorationHover=0,184,212
 
 [Colors:Button]
-BackgroundNormal=234,238,243
+BackgroundNormal=233,237,242
+BackgroundAlternate=222,227,234
 ForegroundNormal=18,20,23
+ForegroundInactive=92,102,115
+ForegroundActive=0,184,212
 DecorationFocus=0,184,212
 DecorationHover=0,184,212
 
 [Colors:Selection]
 BackgroundNormal=0,184,212
+BackgroundAlternate=0,151,178
 ForegroundNormal=255,255,255
+ForegroundInactive=244,246,249
+ForegroundActive=255,255,255
+DecorationFocus=0,184,212
+DecorationHover=0,184,212
+
+[Colors:Tooltip]
+BackgroundNormal=255,255,255
+BackgroundAlternate=244,246,249
+ForegroundNormal=18,20,23
+ForegroundInactive=92,102,115
+DecorationFocus=0,184,212
+DecorationHover=0,184,212
+
+[WM]
+activeBackground=244,246,249
+activeForeground=18,20,23
+inactiveBackground=233,237,242
+inactiveForeground=92,102,115
